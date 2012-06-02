@@ -17,3 +17,9 @@ with just the shortcut
 	new Test();
 
 
+## Notice
+
+Dont Place functions in locations where the default autoloader would find the file.
+
+If you have the class **\Namespace\For\Class\Test()** located in the directory **application/classes/test.php**
+then it is not possible to use the function **Test()** because the kohana autoloader loads the file but because of the namespace the class **Test()** does not exists.
